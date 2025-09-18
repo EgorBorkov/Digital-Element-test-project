@@ -1,0 +1,120 @@
+#our-clients {
+  padding: 6rem 0 8rem 0;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.bg_blue {
+  background: #5a98d0;
+  border-top-left-radius: 12.5rem;
+}
+
+.our-clients__container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.our-clients__content {
+  text-align: center;
+  margin-bottom: 4rem;
+  display: flex;
+  gap: 6.25rem;
+}
+
+.our-clients__title {
+  margin-bottom: 2rem;
+  color: white;
+  text-align: left;
+}
+
+.our-clients__description {
+  max-width: 540px;
+  color: white;
+}
+
+.our-clients__logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.our-clients__logo {
+  font-family: "Gilroy-SemiBold", sans-serif;
+  padding: 2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.25rem;
+  letter-spacing: 0.02em;
+  transition: background-color 0.3s ease;
+  min-height: 128px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #5a98d0;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.our-clients__logo:hover {
+  background: #4e87bb;
+}
+
+.our-clients__logo--more {
+  background: #4e87bb;
+  color: white;
+  cursor: pointer;
+}
+
+.our-clients__logo--more:hover {
+  background: #5a98d0;
+}
+
+@media screen and (max-width: 1400px) {
+}
+
+@media screen and (max-width: 1200px) {
+  .our-clients__content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .our-clients__title {
+    text-align: center;
+  }
+
+  .our-clients__description {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+}
+
+@media screen and (max-width: 768px) {
+  #our-clients {
+    padding: 4rem 0 4rem 0;
+  }
+
+  .bg_blue {
+    border-top-left-radius: 6.5rem;
+  }
+
+  .our-clients__logos {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .our-clients__logo {
+    font-size: 1rem;
+    padding: 1.5rem;
+    min-height: 100px;
+  }
+}
+
+@media screen and (max-width: 576px) {
+}

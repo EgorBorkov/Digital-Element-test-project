@@ -1,0 +1,157 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.modal__content {
+  position: relative;
+  background: white;
+  border-radius: 1rem;
+  padding: 3rem;
+  max-width: 500px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: modalSlideIn 0.3s ease-out;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.modal__content--success {
+  text-align: center;
+  padding: 4rem 3rem;
+}
+
+.modal__close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: #666;
+  transition: all 0.3s ease;
+}
+
+.modal__close:hover {
+  background: rgba(0, 0, 0, 0.1);
+  color: #000;
+}
+
+.modal__header {
+  margin-bottom: 2rem;
+}
+
+.modal__title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1f3f68;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.modal__form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.modal__label {
+  font-weight: 600;
+  color: #1f3f68;
+  font-size: 0.875rem;
+  letter-spacing: 0.05em;
+}
+
+.modal__input,
+.modal__textarea {
+  padding: 1rem 2rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.modal__input,
+.modal__textarea::placeholder {
+  opacity: 20%;
+}
+
+.modal__input:focus,
+.modal__textarea:focus {
+  outline: none;
+  border-color: #5a98d0;
+}
+
+.modal__textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+.modal__input {
+  min-height: 60px;
+}
+.modal__error {
+  color: #eb5757;
+  font-size: 0.875rem;
+  min-height: 1.25rem;
+}
+
+.modal__submit {
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.modal__success-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.modal__success-icon {
+  animation: successPulse 0.6s ease-out;
+}
+
+.modal__success-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f3f68;
+}
+
+.modal__success-description {
+  color: #666;
+  max-width: 300px;
+}
